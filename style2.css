@@ -1,0 +1,58 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background: url('doces-confeitaria-assai-atacadista.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container central */
+.container {
+    background: rgba(255, 255, 255, 0.3);
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(231, 20, 20, 0.2);
+}
+
+/* Títulos */
+h1 {
+    color: #fd0000dc;
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+    color: #060402;
+    font-weight: bold;
+}
+
+/* Contador */
+#contadorDias {
+    color: #d82312;
+    font-size: 20px;
+}
+
+/* Botões */
+input[type="button"], button {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 5px;
+    border: none;
+    background-color: #ca2114;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="button"]:hover, button:hover {
+    background-color: #da300e;
+    transform: scale(1.05);
+}

@@ -1,0 +1,77 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background: url('doces-confeitaria-assai-atacadista.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container central */
+.container {
+    background: rgba(255, 255, 255, 0.3); /* Aumentei a transparência */
+    width: 90%; /* Ajustei para telas menores */
+    max-width: 400px; /* Mantém um tamanho ideal */
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Suavizei a sombra */
+}
+
+/* Títulos */
+h1 {
+    color: #000000;
+    font-size: 24px;
+}
+
+h2 {
+    color: #110908;
+    font-size: 20px;
+}
+
+/* Inputs e botões */
+input, button {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borda mais suave */
+    font-size: 16px;
+}
+
+/* Botão principal */
+input[type="button"], button {
+    background-color: #f8291b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+input[type="button"]:hover, button:hover {
+    background-color: #f04b2a;
+    transform: scale(1.05);
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}

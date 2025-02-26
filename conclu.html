@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Pedido Confirmado</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎉 Pedido Realizado com Sucesso! 🎂</h1>
+        <p>Seu pedido foi confirmado e está sendo preparado.</p>
+        <p>O prazo de entrega é de <span id="diasEntrega"></span> dias.</p>
+        <p>Tempo restante para a entrega: <span id="contadorDias"></span> dias</p>
+        
+        <input type="button" value="Voltar para a Página Inicial" onclick="voltarParaInicio()">
+    </div>
+
+    <script>
+        function voltarParaInicio() {
+            window.location.href = "index.html"; // Altere para a página inicial correta
+        }
+
+        // Definir prazo de entrega (exemplo: 5 dias)
+        let prazoEntrega = 5;
+        document.getElementById("diasEntrega").textContent = prazoEntrega;
+        document.getElementById("contadorDias").textContent = prazoEntrega;
+
+        // Contagem regressiva diária
+        let intervalo = setInterval(() => {
+            prazoEntrega--;
+            document.getElementById("contadorDias").textContent = prazoEntrega;
+
+            if (prazoEntrega <= 0) {
+                clearInterval(intervalo);
+                document.getElementById("contadorDias").textContent = "Entregue! 🎁";
+            }
+        }, 1000 * 60 * 60 * 24); // Reduz 1 dia a cada 24 horas
+    </script>
+
+</body>
+</html>

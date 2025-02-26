@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="android-chrome-512x512.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Confeitaria GRIFUS</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bem-vindo à Confeitaria GRIFUS 🎂</h1>
+
+        <div class="pedido">
+            <input type="number" placeholder="Quilos">
+            <input type="text" placeholder="Sabor do Bolo">
+            <input type="text" placeholder="Sabor do Recheio">
+            <input type="button" value="Fazer Pedido" onclick="irParaOutraPagina()">
+        </div>
+
+        <h2>Calculadora de Preço por Quilo</h2>
+        <div class="calculadora">
+            <input type="number" id="Quilos" placeholder="Digite os quilos" min="0" step="0.1">
+            <button onclick="calcularPreco()">Calcular</button>
+            <p id="resultado">Total: R$ 0,00</p>
+        </div>
+    </div>
+
+    <script>
+        function calcularPreco() {
+            var kilos = document.getElementById("Quilos").value;
+            var precoPorKilo = 30;
+            var total = kilos * precoPorKilo;
+            
+            if (kilos > 0) {
+                document.getElementById("resultado").textContent = "Total: R$ " + total.toFixed(2);
+            } else {
+                document.getElementById("resultado").textContent = "Digite um valor válido!";
+            }
+        }
+        function irParaOutraPagina() {
+        window.location.href = "conclu.html"; // Substitua pelo seu link
+    }
+    </script>
+
+</body>
+</html>
